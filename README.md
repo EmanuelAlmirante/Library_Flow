@@ -1,5 +1,6 @@
 # Library Flow
 
+I have a personal rule of only spending at most 4 hours in a take-home challenge. For that reason, I was not able to fully complete this exercise. For example, there aren't any tests implemented and the code could still be a bit more cleaned up. Nevertheless, feel free to peruse through my GitHub profile and check other exercises that are more complete.
 
 
 ### Necessary Tools:
