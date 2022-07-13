@@ -154,7 +154,8 @@ public class LibraryService {
                             Set<UserModel> allUsers = book.getAllUsers() == null ? new HashSet<>() : book.getAllUsers();
                             allUsers.add(user);
 
-                            Set<BookModel> currentCheckedOutBooks = user.getCurrentCheckedOutBooks() == null ? new HashSet<>() : user.getCurrentCheckedOutBooks();
+                            Set<BookModel> currentCheckedOutBooks =
+                                user.getCurrentCheckedOutBooks() == null ? new HashSet<>() : user.getCurrentCheckedOutBooks();
                             currentCheckedOutBooks.add(book);
                             Set<BookModel> allCheckedOutBooks = user.getAllCheckedOutBooks() == null ? new HashSet<>() : user.getAllCheckedOutBooks();
                             allCheckedOutBooks.add(book);
