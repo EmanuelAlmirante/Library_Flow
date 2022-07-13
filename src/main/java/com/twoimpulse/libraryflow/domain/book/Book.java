@@ -40,7 +40,7 @@ public class Book {
     private String publisher;
 
     @Nonnull
-    @JsonProperty(value = "book_state")
+    @JsonProperty(value = "state")
     private BookState state;
 
     @Nullable

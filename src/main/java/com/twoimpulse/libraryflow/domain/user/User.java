@@ -1,6 +1,7 @@
 package com.twoimpulse.libraryflow.domain.user;
 
 import com.fasterxml.jackson.annotation.JsonCreator;
+import com.fasterxml.jackson.annotation.JsonFormat;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.twoimpulse.libraryflow.domain.book.Book;
 
@@ -12,7 +13,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import java.time.LocalDate;
-import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -30,7 +30,7 @@ public class User {
     private String name;
 
     @Nonnull
-    @JsonProperty(value = "userState")
+    @JsonProperty(value = "state")
     private UserState state;
 
     @Nullable
@@ -41,7 +41,8 @@ public class User {
     @JsonProperty(value = "all_books")
     private Set<Book> allCheckedOutBook;
 
-    @Nonnull
+    @Nullable
+    @JsonFormat(pattern = "dd-MM-yyyy")
     @JsonProperty(value = "registration_date")
     private LocalDate registrationDate;
 
@@ -51,7 +52,7 @@ public class User {
                 @JsonProperty(value = "userState") @Nonnull UserState state,
                 @JsonProperty(value = "current_books") @Nullable Set<Book> currentCheckedOutBooks,
                 @JsonProperty(value = "all_books") @Nullable Set<Book> allCheckedOutBook,
-                @JsonProperty(value = "registration_date") @Nonnull LocalDate registrationDate) {
+                @JsonProperty(value = "registration_date") @Nullable LocalDate registrationDate) {
         this.email = email;
         this.name = name;
         this.state = state;
